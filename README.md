@@ -30,7 +30,7 @@ This repo is the Graduation Project
 ## 1) Kaggle(ImageNet) + Crawling + Teachable Machine
 ![Random](post/캐글.PNG)
 ![Random](post/캐글2.PNG)
-![Random](post/teachable.PNG)
+![Random](post/teachable.png)
 
 ## 2) chatbot Dialogflow
 ![Random](post/dialog1.PNG)
