@@ -3,8 +3,9 @@
 This repo is the Graduation Project
 
 # 판넬
+<center>
 ![Random](post/졸작판넬.jpg)
-
+</center>
 ---
 # Client
 ## 1) UI
