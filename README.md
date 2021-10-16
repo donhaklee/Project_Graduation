@@ -3,7 +3,7 @@
 This repo is the Graduation Project
 
 # 판넬
-![Random](post/졸작판넬.JPG)
+![Random](post/졸작판넬.jpg)
 
 ---
 # Client
