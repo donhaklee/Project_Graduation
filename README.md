@@ -2,11 +2,11 @@
 
 This repo is the Graduation Project
 
-# 판넬
+# 1. 판넬
 ![Random](post/졸작판넬.jpg)
 
 ---
-# Client
+# 2. Client
 ## 1) UI
 ![Random](post/ui1.PNG)
 ![Random](post/ui2.PNG)
@@ -18,7 +18,7 @@ This repo is the Graduation Project
 ![Random](post/sequencelogin.PNG)
 
 ---
-# Server
+# 3. Server
 ## 1) Flowchart
 ![Random](post/DBERdiagram.PNG)
 
@@ -26,7 +26,7 @@ This repo is the Graduation Project
 ![Random](post/DBERdiagram.PNG)
 
 ---
-# Data Training
+# 4. Data Training
 ## 1) Kaggle(ImageNet) + Crawling + Teachable Machine
 ![Random](post/캐글.PNG)
 ![Random](post/캐글2.PNG)
