@@ -4,6 +4,9 @@ This repo is the Graduation Project that is about A.I Web Site
 
 A.I tech is Neural Style Transfer in CNN, Teachable Machine of the Google
 
+Used language : javascript, PHP
+
+
 # 1. 판넬
 ![Random](post/졸작판넬.jpg)
 
