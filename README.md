@@ -1,6 +1,8 @@
 # Project_Graduation
 
-This repo is the Graduation Project
+This repo is the Graduation Project that is about A.I Web Site
+
+A.I tech is CNN, Teachable Machine
 
 # 1. 판넬
 ![Random](post/졸작판넬.jpg)
