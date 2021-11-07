@@ -1,8 +1,8 @@
 # Project_Graduation
 
-This repo is the Graduation Project that is about A.I Web Site
+This repo is the Graduation Project that is about A.I Web Site.
 
-A.I tech is Neural Style Transfer in CNN, Teachable Machine of the Google
+A.I tech is Neural Style Transfer in CNN, Teachable Machine of the Google.
 
 Used language : javascript, PHP
 
@@ -14,8 +14,8 @@ Used language : javascript, PHP
 # 2. Main Service
 ## 1) Photo to Drawing : Neural Style Transfer
 ![Random](post/ptd.png)
-code : <br>
-reference : https://rn-unison.github.io/articulos/style_transfer.pdf
+Source code : <br>
+Reference : https://rn-unison.github.io/articulos/style_transfer.pdf
 
 ## 2) Drawing to Photo : Teachable Machine
 ![Random](post/dtp.PNG)
