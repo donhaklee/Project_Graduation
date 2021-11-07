@@ -13,7 +13,7 @@ Used language : javascript, PHP
 ---
 # 2. Main Service
 ## 1) Photo to Drawing : Neural Style Transfer
-![Random](post/ptd.PNG)
+![Random](post/ptd.png)
 code : <br>
 reference : https://rn-unison.github.io/articulos/style_transfer.pdf
 
