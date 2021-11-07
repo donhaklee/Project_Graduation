@@ -11,7 +11,16 @@ Used language : javascript, PHP
 ![Random](post/졸작판넬.jpg)
 
 ---
-# 2. Client
+# 2. Main Service
+## 1) Photo to Drawing : Neural Style Transfer
+![Random](post/ptd.PNG)
+code : <br>
+reference : https://rn-unison.github.io/articulos/style_transfer.pdf
+
+## 2) Drawing to Photo : Teachable Machine
+![Random](post/dtp.PNG)
+---
+# 3. Client
 ## 1) UI
 ![Random](post/ui1.PNG)
 ![Random](post/ui2.PNG)
@@ -23,7 +32,7 @@ Used language : javascript, PHP
 ![Random](post/sequencelogin.PNG)
 
 ---
-# 3. Server
+# 4. Server
 ## 1) Flowchart
 ![Random](post/DBERdiagram.PNG)
 
@@ -31,7 +40,7 @@ Used language : javascript, PHP
 ![Random](post/DBERdiagram.PNG)
 
 ---
-# 4. Data Training
+# 5. Data Training
 ## 1) Kaggle(ImageNet) + Crawling + Teachable Machine
 ![Random](post/캐글.PNG)
 ![Random](post/캐글2.PNG)
