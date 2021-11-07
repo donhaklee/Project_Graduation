@@ -7,7 +7,7 @@ A.I tech is Neural Style Transfer in CNN, Teachable Machine of the Google
 Used language : javascript, PHP
 
 
-# 1. 판넬
+# 1. Poster
 ![Random](post/졸작판넬.jpg)
 
 ---
