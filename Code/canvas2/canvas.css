@@ -1,0 +1,37 @@
+
+.canvas2 {
+  box-sizing:border-box;
+}
+.canvas_app {
+  font-family:"Raleway", sans-serif;
+}
+
+.canvas_app .canvas_controls .canvas_type,
+.canvas_app .canvas_controls .canvas_size,
+.canvas_app .canvas_controls .canvas_color {
+  margin: 0px 10px;
+}
+.canvas_app .canvas_controls .canvas_type input {
+  display:none;
+}
+
+.canvas_app .canvas_controls .canvas_type input:checked + label {
+  background:#111;
+  color:#eee;
+  border-radius:50%;
+}
+.canvas_app .canvas_controls .canvas_size input {
+  height:10px;
+}
+.canvas_app .canvas_controls .canvas_actions {
+  flex:1;
+  text-align:right;
+}
+.canvas_app .canvas_controls .canvas_actions button {
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+#canvas-wrapper {
+	position : relative;
+}

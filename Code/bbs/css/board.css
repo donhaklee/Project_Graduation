@@ -1,0 +1,22 @@
+body {
+    background-image: url("1.jpg");
+    background-size: cover;
+    
+}
+@font-face {
+	src:url("Maplestory\ Bold.ttf");
+	font-family:"jua";
+}
+.con{
+    margin-top:100px;
+}
+
+
+a>.headh1 {
+    color:white!important;
+}
+a { text-decoration:none !important;
+    color:#ADD8E6!important } 
+a:hover { text-decoration:none !important;
+    color:#ff6666!important }
+
