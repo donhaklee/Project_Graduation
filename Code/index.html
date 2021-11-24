@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<title>Photo Drawing A.I</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/templatemo-dream-pulse.css" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython_stdlib.min.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <meta property="og:image" content="img/ai.jpg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
+
+
+
+	<!--canvas-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<link rel="stylesheet" href="canvas/drawing.css"/>
+	<link rel="stylesheet" href="canvas2/canvas.css"/>
+	
+	
+	<!--PhotoToDrawing-->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+    <script src="PhotoToDrawing/phototodrawing.js" defer></script>
+	<script src="https://button.glitch.me/button.js"></script>
+    <link rel="stylesheet" href="PhotoToDrawing/ee.css" />
+	
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="row">
+            <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="tm-sidebar-sticky">
+                    <div class="tm-brand-box">
+                        <div class="tm-double-border-1">
+                            <div class="tm-double-border-2">
+                                <h1 class="tm-brand text-uppercase">Photo Drawing A.I</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
+                        <li class="nav-item">
+                            <a href="#intro" class="nav-link active">
+                                <span class="d-inline-block mr-3">사이트 설명</span>
+                                <span class="d-inline-block tm-white-rect"></span>
+                            </a>
+                        </li>
+
+						<li class="nav-item">
+                            <a href="#ptd" class="nav-link">
+                                <span class="d-inline-block mr-3">Photo to Drawing</span>
+                                <span class="d-inline-block tm-white-rect"></span>
+                            </a>
+                        </li>
+						
+						<li class="nav-item">
+                            <a href="#Letdrawing" class="nav-link">
+                                <span class="d-inline-block mr-3">Drawing!</span>
+                                <span class="d-inline-block tm-white-rect"></span>
+                            </a>
+                        </li>
+						
+                        <li class="nav-item">
+                            <a href="#dtp" class="nav-link">
+                                <span class="d-inline-block mr-3">Drawing to Photo</span>
+                                <span class="d-inline-block tm-white-rect"></span>
+                            </a>
+                        </li>
+						
+
+                        <li class="nav-item">
+                            <a href="#work" class="nav-link">
+                                <span class="d-inline-block mr-3">Our Work</span>
+                                <span class="d-inline-block tm-white-rect"></span>
+                            </a>
+                        </li>
+                    </ul>
+					<a href="bbs/board.php">건의게시판</a>
+                    <ul class="nav flex-row tm-social-links">
+                        <li class="nav-item">
+                            <a href="https://facebook.com" class="nav-link tm-social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com" class="nav-link tm-social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://google.com" class="nav-link tm-social-link">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://instagram.com" class="nav-link tm-social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <footer class="text-center text-white small">
+                        <p class="mb--0 mb-2">그림을 사진, 사진을 그림으로!</p>
+                    </footer>
+                </div>
+            </nav>
+
+            <main role="main" class="ml-sm-auto col-12">
+                <div class="parallax-window" data-parallax="scroll" data-image-src="img/back7.jpg">
+                    <div class="tm-section-wrap">
+                        <section id="intro" class="tm-section">
+                            <div class="tm-bg-white-transparent tm-intro">
+                                <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary">Instruction</h2>
+                                <p class="tm-color-gray">
+                                    이 사이트는 이미지 데이터를 활용해 그림과 사진을 서로 변환시키는 사이트입니다.
+                                </p>
+                                <p class="mb-0 tm-color-gray">
+
+                                    왼쪽 Sidebar를 보면 
+									Photo to Drwaing은 그림형태로 바꾸고 싶은 베이스 사진을 올리고
+									어떤 형태의 스타일로 만들고 싶은지 스타일 사진을 업로드하면 그림형태로 출력됩니다.
+									또한 Drawing to Photo는 간단한 그림 sketch를 올리게되면 그와 비슷한 사진을 출력해냅니다.
+									
+
+                                </p>
+
+                                <p class="mb-0 tm-color-gray">
+
+                                    이미지를 업로드하게 되면 해당 이미지를 AI가 판단하여 결과를 출력하게 됩니다.
+                                    하단은 변환된 이미지 결과 샘플을 보여주며 해당 인공지능의 성능을 보여줍니다.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+				
+				
+				
+				
+				<!-- Picture to Photo
+				<div class="tm-section-wrap bg-white">
+                    <section id="ptd" class="row tm-section">
+                        <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                        <div class="col-12">
+                            <div class="w-100 tm-double-border-1 tm-border-gray">
+                                <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+
+                                    <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary">Photo to Drawing</h2>
+                                    <div class="tm-gallery-wrap">
+                                        <div class="mt-3 container file-upload1">
+                                            <div class="image-upload-wrap1">
+                                                <input class="file-upload-input1" type='file' onchange="readURL1(this);" accept="image/*" />
+                                                <div class="drag-text">
+                                                    <img src="img/pfg.png" class="mt-5 pt-5 upload">
+                                                    <h3 class="mb-5 pb-5 pt-4  upload-text1">사진을 그림으로!</h3>
+                                                </div>
+                                            </div>
+                                            <div class="file-upload-content1">
+                                                <img class="file-upload-image1" id="face-image" src="#" alt="your image" />
+                                                <div id="loading1" class="animated bounce">
+                                                    <div class="spinner-border" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                    <p class="text-center">분석중입니다...</p>
+                                                </div>
+                                                <p class="result-message"></p>
+                                                <div id="label-container1" class="d-flex flex-column justify-content-around"></div>
+                                                <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+                                                <div class="pt-3 image-title-wrap">
+                                                    <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                                                        <span class="try-again-text">다른 사진으로 업로드</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div> -->
+				
+				
+				
+				
+				
+<!-- 				
+				
+				
+				<div class="tm-section-wrap bg-white">
+			<section id="ptd" class="row tm-section">
+				<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+				<div class="col-12">
+					<div class="w-100 tm-double-border-1 tm-border-gray">
+						<div class="tm-double-border-2 tm-border-gray tm-box-pad">
+							 <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary">Photo to Drawing</h2>
+							
+							
+							 <div class="tm-gallery-wrap">
+                                    <div class="mt-3 container file-upload1">
+												<p class="PTDp"><label> 그림으로 바꾸고 싶은 사진 업로드 하기 <input id="PTDinput" type="file" onchange="loadContent1(event)"></label></p>
+										<p class="PTDp"><label> 그림의 스타일 업로드 하기 <input id="PTDinput" type="file" onchange="loadStyle1(event)"></label></p><br>
+										</div>
+										
+										
+                                    <div class="mt-3 container file-upload1">
+									  <div class="left">
+										<div class="frame3">
+											<p>
+											  베이스 사진
+											</p>
+										  		<img id="content" class="image" crossorigin="anonymous" src=""/> 
+												
+
+										</div>
+										  <div class="right">
+											<p>
+											  꾸미기 스타일 사진
+												
+											</p>
+											<img id="style" class="image" crossorigin="anonymous" src="" />
+										</div>
+									</div>
+						
+								 </div>
+										
+										
+						
+                                    <div class="mt-3 container file-upload1">				
+						<div>
+							<h4 class="dark"><span id="PTDloading" class="result">변 환 중</span><span id="ready" hidden>
+											   변 환 완 료!</span></h4>
+							<canvas id="stylized" height="250px"></canvas>
+						</div>
+
+					  <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+							
+							
+								 </div>
+							</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>			
+				-->
+				
+				
+				
+				
+				
+				
+				
+				
+	<div class="tm-section-wrap bg-white">
+			<section id="ptd" class="row tm-section">
+				<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+				<div class="col-12">
+					<div class="w-100 tm-double-border-1 tm-border-gray">
+						<div class="tm-double-border-2 tm-border-gray tm-box-pad">
+							 <h2 style="color:red">Photo to Drawing - Neural Style Transfer</h2><br>
+							    
+                                 <h3 style="color:blue">1. 체험</h3>
+							 <div class="tm-gallery-wrap">
+                                    <div class="mt-3 container file-upload1">
+												<p class="PTDp"><label class="PTDlabel"> 1. 바꿀 사진 업로드 <input id="PTDinput" type="file" onchange="loadContent1(event)"></label></p>
+										<p class="PTDp"><label class="PTDlabel"> 2. 그림의 스타일 업로드 <input id="PTDinput" type="file" onchange="loadStyle1(event)"></label></p><br>
+										</div>
+										
+										
+                                    <div class="mt-3 container file-upload1">
+									  <div class="left">
+										<div class="frame3">
+											<p>
+											  &emsp; &emsp; &emsp; &emsp;&emsp; &emsp;1  . 베이스 사진
+											</p>
+										  		&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;<img id="content" class="image" crossorigin="anonymous" src=""/> 
+												
+
+										</div>
+										  <div class="right">
+											<p>
+											   &emsp; &emsp;&emsp; &emsp;&emsp; &emsp; 2  . 꾸미기 스타일 사진
+												
+											</p>
+											 &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;<img id="style" class="image" crossorigin="anonymous" src="" />
+										</div>
+									</div>
+						
+								 </div>
+										
+										
+						
+                                    <div class="mt-3 container file-upload1">				
+						             <div>
+							            <h4 class="dark"><span id="PTDloading" class="result">변 환 중</span><span id="ready" hidden>
+											   &emsp; &emsp; &emsp;&emsp;변 환 완 료!</span></h4>
+							&emsp; &emsp;&emsp;&emsp;&emsp;<canvas id="stylized1" height="250px"></canvas>
+						            </div>
+
+					            <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+							
+							
+								 </div>
+							</div><br>
+
+                            <h3 style="color:blue">2. 상세설명</h2>
+                                <p>
+                                    <h4 style="color:#48a513">1) Neural Style Transfer</h4>
+
+                                    <img src="img/nst1.png" height="250px"><br>
+                                            neural style transfer는 가중치를 변경하는 타 A.I기술과 다르게 사전에 학습된 CNN모델을 이용하여 
+                                            고정된 VGG네트워크의 가중치 값으로 이미지의 loss 값을 줄이는 방향으로 이미지를 업데이트해 최적화하는 기술입니다.<br>
+                                            해당 기술은 Content Image와 Style Image 2장을 사용하기 때문에 2개의 loss값이 있어야 하고 두 개의 loss값을 동시에 줄여가며 
+                                            이미지를 업데이트 해야합니다.<br>
+                                            이때 업데이트 되는 이미지는 업로드한 이미지와 같은 크기의 노이즈 이미지 벡터x이며
+                                            이 노이즈 이미지는 loss값을 줄일때마다 업데이트 되어 결과를 보여주는 이미지 역할을 하게됩니다.<br>
+                                            하지만 두 이미지는 틀에 해당하는 이미지와 분위기에 해당하는 이미지로 확실히 구분되어야 하기 때문에
+                                            각각의 이미지 loss값은 content loss값과 style loss값으로 구분하여 서로 다른 방법으로 줄여야 합니다.<br>
+
+                                    <br><br>
+                                    <h4 style="color:#48a513">2) Content loss</h4>
+                                    <img src="img/nst2.png" height="250px"><br>
+                                            먼저 content loss에 대해 살펴보면 다음과 같습니다.<br>
+                                            우선 Content Image를 업로드할 경우 Content Image와 동일한 크기의 노이즈 이미지가 생성됩니다.<br>
+                                            그리고 두 개의 이미지를 사전 학습된 CNN에 넣으면 서로 다른 Feature Map이 생성되는데 
+                                            그 때의 Feature Map의 차이를 줄여나가 동일하게 만드는 방향으로 loss값을 줄여나가는 방식을 사용합니다.<br>
+                                            즉 두 이미지의 feature의 activation값을 동일하도록 만들어 손실값을 줄이는 방법입니다.<br>
+                                            수식을 보면 i는 채널을 나타내고, j는 i에 해당하는 채널의 위치값을 나타내고 , l은 레이어의 번호를 나타냅니다.<br>
+                                            이러한 수식을 이용해 노이즈의 feature map F와 content의 feature map P를 1대1로 비교하여
+                                            유사해지도록 하여 loss값을 줄인다는 의미의 수식으로 구하면됩니다.<br><br>
+                                    <h4 style="color:#48a513">3) Style loss</h4>
+                                    <img src="img/nst3.png" height="250px"><br>
+                                            다음은 style loss입니다.<br>
+                                            style loss에서 가장 중요하게 작용되는 것은 gram matrix입니다.<br>
+                                            Gram Matrix는 CNN을 통해 얻은 서로 다른 feature값의 상관관계를 나타낸 값을 행렬로써 나타낸 값입니다.<br>
+                                            즉, 수식을 보면 k는 각각의 feature의 원소를 나타내고 서로다른 feature i와 j의 원소값을 곱한 후 더한 값을 행렬로 나타낸 값이라 보면되고
+                                            값이 크게 나오면 상관관계가 높고 작게 나오면 상관관계가 낮다는것을 의미합니다.<br>
+                                            다시 style loss구하는 법의 수식을 살펴보면
+                                            G는 노이즈 이미지 x의 gram matrix고 A는 style image의 gram matrix를 의미하고
+                                            각각의 gram matrix를 유사하게 해서 차이가 작아지도록 한다는 의미의 수식입니다.<br>
+                                            그리고 해당 값이 너무 커지는것을 막고자 원소의 개수로 나누어주면 El이라고 하는 값이 나오게 되는데
+                                            여기서 EL은 특정 레이어 L에 대한 gram matrix의 차이값이 됩니다.<br>
+                                            이렇게 모든 레이어에 대한 EL 값을 구해 하이퍼파라미터 가중치 값을 곱하면 스타일 loss값을 얻을 수 있게 됩니다.<br>
+                                            즉, style Image를 업로드할 경우 업데이트 해야 할 노이즈 값의 Gram Matrix와 업로드한 Style Image의 Gram Matrix의 차이를 줄여 
+                                            유사하도록 업데이트하는 방법을 사용합니다. <br>
+                                            이러한 상관관계가 유사하도록 업데이트 하는 방법이라고 볼 수 있습니다.<br><br>
+                                    <h4 style="color:#48a513">4) 정리</h4>
+                                    <img src="img/nst.png" height="500px"><br> <!--350-->
+                                    
+                                            전체적인 흐름을 보면 다음과 같습니다.<br>
+                                            왼쪽은 style image의 style loss값을 줄여나가는 모습이고
+                                            오른쪽은 content image의 content loss값을 줄여나가는 모습입니다.<br>
+                                            스타일 loss값의 과정을 보면 노이즈 값의 gram matrix와 style image의 gram matrix의 차이를 줄이는 모습을 볼 수 있고
+                                            content loss 과정을 보면 노이즈의 feature map과 content image의 feature map의 차이를 줄여나가는 모습을 볼 수 있습니다.<br>
+                                            이 두 이미지의 loss값에 대한 선형합을 하게 되면 토탈 loss값이 나오게 되고 마지막으로
+                                            해당 loss값을 노이즈 x로 미분하며 gradient descent 방식으로 노이즈를 업데이트 해나가는 기술이라는 것을 알수있습니다.
+                                    <br><br>
+                                    <h4 style="color:#48a513">5) 예시</h4>
+                                    
+                                    <img src="img/nstex.png" height="450px"> <!--350-->
+                                    
+                                    <br>참고논문 : https://rn-unison.github.io/articulos/style_transfer.pdf
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>			
+							
+							
+        <div class="tm-section-wrap bg-white">
+            <section id="Letdrawing" class="row tm-section">
+				<div class="col-12">
+                    <div class="w-100 tm-double-border-1 tm-border-gray">
+                        <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+							<h2 style="color:red">Drawing! - For Teachable Machine</h2><br>
+                                <h3 style="color:blue">1. 상세설명</h2>
+                                    <p>
+                                        아래 Drawing to Photo를 위한 그림판 기능입니다.<br>
+                                        스케치를 자유롭게 하시고 저장한 후 이미지를 업로드하시면 A.I가 판단하여 그와 비슷한 사진을 출력할 것입니다.
+                                    
+                                    </p>
+
+							<div class="canvas2">
+							<div class="canvas_body2">
+
+							<div class="canvas_app">
+								<div class="canvas_controls">
+									<div class="canvas_type">
+										<input type="radio" name="pen-type" id="pen-pencil" checked>
+									</div>
+									<div class="canvas_size" id="pen-size">
+									</div>
+
+									<div class="canvas_actions">
+
+										<input type="color" id="pen-color" value="#000">	
+										<button id="reset-canvas">Reset</button>
+										<button id="save-canvas">Save</button>
+									</div>
+								</div>
+								<div id="canvas-wrapper" style="border:1px solid black;">
+
+								</div>
+							</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+				
+									
+
+						
+				
+				
+
+                <div class="tm-section-wrap bg-white">
+	
+                   		<section id="dtp" class="row tm-section">
+                        <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                        <div class="col-12">
+                            <div class="w-100 tm-double-border-1 tm-border-gray">
+                                <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+
+                                    <h2 style="color:red">Drawing to Photo - Teachable Machine</h2><br>
+                                        
+                                            
+                                        <h3 style="color:blue">1. 체험</h2>
+									<div class="tm-gallery-wrap">
+										
+                                        <div class="mt-3 container file-upload">
+                                            <div class="image-upload-wrap">
+                                                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                                <div class="drag-text">
+                                                    <img src="img/pfg.png" class="mt-5 pt-5 upload">
+                                                    <h3 class="mb-5 pb-5 pt-4  upload-text">그림을 사진으로!</h3>
+                                                </div>
+                                            </div>
+
+                                            <body onload="brython()">
+                                                <div class="file-upload-content">
+                                                    <img class="file-upload-image" id="DrawingToPhotoimage" src="#" alt="your image" />
+													<p class="result-image"> </p>								
+													
+                                                    <div id="loading" class="animated bounce">
+                                                        <div class="spinner-border" role="status">
+                                                            <span class="sr-only">Loading...</span>
+                                                        </div>
+                                                        <p class="text-center">분석중입니다...</p>
+                                                    </div>
+                                                    <p class="result-message"></p>
+                                                    <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                                                    <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+                                                    <div class="pt-3 image-title-wrap">
+                                                        <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                                                            <span class="try-again-text">다른 사진으로 업로드</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                        </div><br>
+                                        <h3 style="color:blue">2. 상세설명</h2>
+                                            <p>
+                                                <h4 style="color:#48a513">1) Teachable Machine</h4>
+                                                <img src="img/tm3.png" height="450px"><br> <!--330-->
+                                                drawing to photo에 사용된 teachable machine은 구글이 2019년도에 출시한 서비스이며 개발용부터 교육용까지 다양한분야에서 사용되는모델입니다.
+                                                사진, 음악, 행동을 데이터화 시킬 수 있고 각각의 데이터를 batch size와 epoch값을 정한후 학습시키면
+                                                웹, 앱 등에서 응용하여 사용할 수 있게 됩니다.<br>
+                                                코드는 tensorflow를 사용하면 python형태로 tensorflowjs로 생성하면 javascript형태로 tensorflowlite를 사용하면 java형태로 사용가능하여 앱으로도 구성할 수 있습니다.<br>
+                                                해당 프로젝트에선 web구성을 위해 tensorflowjs를 사용했고
+                                                스케치를 인식시키기 위한 데이터는 구글 크롤링과 캐글을 이용했습니다.<br>
+                                                우선 스케치 선별을 위한 단어 선정을 진행했고 주로 국어사전에서 명사형을 따로 분류한 후 
+                                                명사형 중에서도 가장 통일된 형태를 지닌 명사를 선정했습니다.
+                                                이후 선정된 명사형을 이용하여 1차적으론 캐글의 ImageNet 스케치 데이터를 수집했고 
+                                                2차적으로 Python selenium 구글 크롤링을 통해 "명사형단어 + sketch"의 형태로 검색하여 모델을 수집했습니다.
+                                                이후 수집된 모델들은 teachable machine에 업로드 하였습니다.<br>
+                                                다음 teachable machine 내에 업로드한 데이터에 대한 인공적인 전처리를 진행했고 
+                                                이때 batch_size는 16, epoch값은 50으로 설정하여 학습시켰습니다.<br>
+                                                마지막으로 업로드 시 결과값 혹은 결과수치 대신 결과사진을 출력시키는 코딩을 진행하여 웹에 적용시켰습니다.<br><br>
+                                                
+                                                <h4 style="color:#48a513">2) Data Collection</h4>
+
+                                                <img src="img/tm1.png" height="300px"> <!--250-->
+                                                <img src="img/tm2.png" height="700px"> <!--500-->
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </section>
+        </div>
+
+
+				
+				
+				
+		
+				
+				
+				
+				
+				
+
+        <div class="tm-section-wrap bg-white">
+            <section id="work" class="row tm-section">
+                <div class="col-12">
+                    <div class="w-100 tm-double-border-1 tm-border-gray">
+                        <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+                            <!--이중박스-->
+
+                                <div class="tm-gallery-wrap">
+                                    <h2 class="tm-color-primary tm-section-title mb-4 ml-2">Our Work</h2>
+                                    <div class="tm-gallery">
+										<div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/cat.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>사진 => 그림</p>
+                                                    <a href="img/gallery/converted/convertedcat.jpg">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/goose.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>그림 => 사진</p>
+                                                    <a href="img/gallery/converted/convertedgoose.jpg">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        
+                                        <div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/converted/convertedcup.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>사진 => 그림</p>
+                                                    <a href="img/gallery/converted/convertedcup2.png">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/pig.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>그림 => 사진</p>
+                                                    <a href="img/gallery/converted/convertedpig.jpg">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/converted/convertedgoose.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>사진 => 그림</p>
+                                                    <a href="img/gallery/converted/convertedgoose2.png">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/cloud.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>그림 => 사진</p>
+                                                    <a href="img/gallery/converted/convertedcloud.jpg">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/me2.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>사진 => 그림</p>
+                                                    <a href="img/gallery/converted/convertedme.jpg">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+										<div class="tm-gallery-item">
+                                            <figure class="effect-bubba">
+                                                <img src="img/gallery/cup.jpg" alt="Our Work Image" class="img-fluid">
+                                                <figcaption>
+                                                    <p>그림 => 사진</p>
+                                                    <a href="img/gallery/converted/convertedcup.jpg">View more</a>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+		<!--챗봇-->
+		<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+		<df-messenger
+		  intent="WELCOME"
+		  chat-title="사이트관리자"
+		  agent-id="9088c615-bae0-4925-8c63-f2c61acef3e4"
+		  language-code="ko"
+		></df-messenger>
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.singlePageNav.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="slick/slick.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/templatemo-scripts.js"></script>
+
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.min.js"></script>
+		<script src="canvas2/canvas.js"></script>
+
+
+
+
+<script src="canvas/canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script src="teachable.js"></script>
+				
+<script type="text/javascript">
+    
+
+	
+				
+	function readURL1(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$('.image-upload-wrap1').hide();
+				$('#loading1').show();
+				$('.file-upload-image1').attr('src', e.target.result);
+				$('.file-upload-content1').show();
+				$('.image-title').html(input.files[0].name);
+			};
+			reader.readAsDataURL(input.files[0]);
+			init().then(function() {
+				console.log("hello");
+				predict();
+				$('#loading').hide();
+			});
+		} else {
+			removeUpload();
+		}
+	}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$('.image-upload-wrap').hide();
+				$('#loading').show();
+				$('.file-upload-image').attr('src', e.target.result);
+				$('.file-upload-content').show();
+				$('.image-title').html(input.files[0].name);
+			};
+			reader.readAsDataURL(input.files[0]);
+			init().then(function() {
+				console.log("hello");
+				predict();
+				$('#loading').hide();
+			});
+		} else {
+			removeUpload();
+		}
+	}
+	
+
+
+
+	function removeUpload() {
+		$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+		$('.file-upload-content').hide();
+		$('.image-upload-wrap').show();
+	}
+	$('.image-upload-wrap').bind('dragover', function() {
+		$('.image-upload-wrap').addClass('image-dropping');
+	});
+	$('.image-upload-wrap').bind('dragleave', function() {
+		$('.image-upload-wrap').removeClass('image-dropping');
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+	let URL;
+	let model, webcam, labelContainer, maxPredictions;
+	async function init() {
+		if (document.getElementById("gender").checked) {
+			URL = urlMale;
+		} else {
+			URL = urlFemale;
+		}
+		const modelURL = URL + "model.json";
+		const metadataURL = URL + "metadata.json";
+		model = await tmImage.load(modelURL, metadataURL);
+		maxPredictions = model.getTotalClasses();
+		labelContainer = document.getElementById("label-container");
+		for (let i = 0; i < maxPredictions; i++) {
+			var element = document.createElement("div")
+			element.classList.add("d-flex");
+			labelContainer.appendChild(element);
+		}
+	}
+</script>
+			
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+
+.result {
+	visibility : hidden;
+}
+.frame3.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.frame3 label {
+  cursor: pointer;
+  border: none;
+  vertical-align: middle;
+  background: #f7f1f8;
+  color: #2d1832;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 16px;
+  padding: 8px 24px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: all 0.25s ease-in 0s;
+}
+
+#PTDinput[type="file"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.image {
+  height: 256px; 
+}
+
+#PTDloading{
+  animation: pulsing-fade 1.2s ease-in-out infinite;
+}
+
+@keyframes pulsing-fade { 
+  50% { opacity: 0.3; }
+}
+
+@media screen and (max-width: 1000px) {
+  .right {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  .left, .right {
+    width: 100vw;
+  }
+  .frame3 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+a:link, a:visited {
+  color: white;
+  font-weight: bold;
+}
+
+.dark {
+  color: #2d1832;
+  width: 50vw;
+  max-width: 800px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.left {
+  width: 50vw;
+  max-width: 800px;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
