@@ -8,7 +8,7 @@ Used language : javascript, PHP
 
 
 # 1. Poster
-![Random](post/졸작판넬.jpg)
+![Random](post/졸작판넬.png)
 
 ---
 # 2. Main Service
