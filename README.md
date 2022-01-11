@@ -1,6 +1,6 @@
 # Project_Graduation
 
-This repo is the Graduation Project that is about A.I Web Site.<br>
+This repo is the Graduation Project that is about A.I Web Site.<br><br>
 
 A.I tech is Neural Style Transfer in CNN, Teachable Machine of the Google.
 
