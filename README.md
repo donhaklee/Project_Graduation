@@ -2,7 +2,7 @@
 
 This repo is the Graduation Project that is about A.I Web Site.<br><br><br>
 
-A.I tech is Neural Style Transfer in CNN, Teachable Machine of the Google.
+A.I tech is Neural Style Transfer in CNN, Used Teachable Machine of the Google.
 
 Used Tool : VSC, Teachable Machine, Dialogflow<br>
 Used language : javascript, PHP <br><br>
