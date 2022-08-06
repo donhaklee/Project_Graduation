@@ -35,7 +35,7 @@ Reference : https://rn-unison.github.io/articulos/style_transfer.pdf
 ---
 # 4. Server
 ## 1) Flowchart
-![Random](post/DBERdiagram.PNG)
+![Random](post/flowchart.PNG)
 
 ## 2) Database E-R Diagram
 ![Random](post/DBERdiagram.PNG)
